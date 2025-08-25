@@ -19,39 +19,30 @@
       darkMode: 'class'
     }
   </script>
-  <!-- Devicon ícones -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
-  <!-- Header / Navbar -->
+<body class="bg-slate-950 text-slate-100 antialiased font-sans">
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center gap-4">
-      <a href="#home" class="font-extrabold tracking-tight text-lg">&lt;Jhonatan /&gt;</a>
-      <nav class="ml-auto hidden md:flex items-center gap-6 text-sm text-slate-300">
-        <a class="hover:text-white" href="#projetos">Projetos</a>
-        <a class="hover:text-white" href="#skills">Skills</a>
-        <a class="hover:text-white" href="#sobre">Sobre</a>
-        <a class="hover:text-white" href="#contato">Contato</a>
-      </nav>
-      <button id="themeToggle" aria-label="Alternar tema"
-              class="ml-auto md:ml-0 rounded-lg border border-white/10 px-3 py-1.5 text-sm hover:bg-white/5">
-        Tema
-      </button>
-    </div>
+    <nav class="mx-auto max-w-6xl px-4 py-3 flex items-center gap-4" aria-label="Main">
+      <a href="#home" class="font-extrabold tracking-tight text-lg" aria-label="Página inicial">&lt;Jhonatan /&gt;</a>
+      <ul class="ml-auto hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <li><a class="hover:text-white" href="#projetos">Projetos</a></li>
+        <li><a class="hover:text-white" href="#skills">Skills</a></li>
+        <li><a class="hover:text-white" href="#sobre">Sobre</a></li>
+        <li><a class="hover:text-white" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="mx-auto max-w-6xl px-4">
-    <!-- HERO -->
     <section id="home" class="py-12 md:py-20">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-        <!-- ESQUERDA: Card de perfil -->
-        <div class="md:col-span-1">
+        <aside class="md:col-span-1">
           <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
             <img src="images/perfil.jpeg" alt="Foto de Jhonatan da Silva"
-                 class="w-full aspect-square object-cover rounded-2xl border border-white/10 mb-4">
+                 class="w-full aspect-square object-cover rounded-2xl border border-white/10 mb-4" />
             <p class="text-sm text-slate-400">Disponível para:</p>
-            <h3 class="mt-1 text-xl font-bold">Freelancer & vagas Júnior</h3>
-
+            <h3 class="mt-1 text-xl font-bold">Desenvolvedor</h3>
             <div class="mt-4 grid gap-3 text-sm">
               <div class="rounded-xl border border-white/10 p-3">
                 <p class="text-slate-400">Local</p>
@@ -65,28 +56,24 @@
                 </p>
               </div>
             </div>
-
-            <div class="mt-4 flex gap-3 text-sm">
+            <nav class="mt-4 flex gap-3 text-sm" aria-label="Redes sociais">
               <a aria-label="GitHub" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5"
                  href="https://github.com/jhonatansilva1903" target="_blank" rel="noopener">GitHub</a>
               <a aria-label="LinkedIn" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5"
                  href="https://www.linkedin.com/in/jhonatan-da-silva-984958379/" target="_blank" rel="noopener">LinkedIn</a>
               <a aria-label="WhatsApp" class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5"
                  href="https://wa.me/5547988933843" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
+            </nav>
           </div>
-        </div>
-
-        <!-- DIREITA: Infos -->
-        <div class="md:col-span-2">
+        </aside>
+        <section class="md:col-span-2" aria-labelledby="hero-title">
           <p class="text-sm uppercase tracking-[.2em] text-slate-400">Desenvolvedor de Software</p>
-          <h1 class="mt-2 text-3xl md:text-5xl font-extrabold leading-tight">
+          <h1 id="hero-title" class="mt-2 text-3xl md:text-5xl font-extrabold leading-tight">
             <span class="text-indigo-400">Jhonatan da Silva</span>.
           </h1>
-          <p class="mt-4 text-slate-300 max-w-2xl">
+          <p class="mt-4 text-slate-300 max-w-2xl"></p>
             Codifico interfaces rápidas e limpas, com foco em resultado, UX e boas práticas.
           </p>
-
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#projetos" class="rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 font-semibold shadow shadow-black/30">
               Ver projetos
@@ -95,9 +82,7 @@
               Fale comigo
             </a>
           </div>
-
-          <!-- Ícones de Skills (grandes) -->
-          <div class="mt-8 flex flex-wrap items-center gap-6 text-5xl">
+          <div class="mt-8 flex flex-wrap items-center gap-6 text-5xl" aria-label="Skills principais">
             <i title="HTML5" class="devicon-html5-plain colored"></i>
             <i title="CSS3" class="devicon-css3-plain colored"></i>
             <i title="Tailwind CSS" class="devicon-tailwindcss-plain colored"></i>
@@ -107,15 +92,14 @@
             <i title="GitHub" class="devicon-github-original"></i>
             <i title="Figma" class="devicon-figma-plain colored"></i>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="py-12 border-t border-white/10">
+    <section id="projetos" class="py-12 border-t border-white/10" aria-labelledby="projetos-title">
       <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl md:text-3xl font-bold">Projetos</h2>
-        <label class="text-sm text-slate-400 flex items-center gap-2">
+        <h2 id="projetos-title" class="text-2xl md:text-3xl font-bold">Projetos</h2>
+        <label for="filter" class="text-sm text-slate-400 flex items-center gap-2">
           <span>Filtro:</span>
           <select id="filter" class="rounded-lg bg-slate-900 border border-white/10 px-2 py-1">
             <option value="all">Todos</option>
@@ -128,10 +112,9 @@
       <div id="grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="py-12 border-t border-white/10">
-      <h2 class="text-2xl md:text-3xl font-bold">Skills</h2>
-      <div class="mt-6 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center text-4xl">
+    <section id="skills" class="py-12 border-t border-white/10" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="text-2xl md:text-3xl font-bold">Skills</h2>
+      <div class="mt-6 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center text-4xl" aria-label="Skills">
         <i title="HTML5" class="devicon-html5-plain colored"></i>
         <i title="CSS3" class="devicon-css3-plain colored"></i>
         <i title="JavaScript" class="devicon-javascript-plain colored"></i>
@@ -144,101 +127,97 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="py-12 border-t border-white/10">
-      <h2 class="text-2xl md:text-3xl font-bold">Sobre</h2>
+    <section id="sobre" class="py-12 border-t border-white/10" aria-labelledby="sobre-title">
+      <h2 id="sobre-title" class="text-2xl md:text-3xl font-bold">Sobre</h2>
       <p class="mt-4 text-slate-300 max-w-3xl">
-        Sou desenvolvedor de software desde março de 2025, criando experiências digitais limpas, acessíveis e performáticas.
-        Tenho experiência com tecnologia, montagem e testes de computadores, vendas técnicas em e-commerce, suporte ao cliente e
-        desenvolvimento web. Apaixonado por hardware, games e performance. Busco aplicar minha experiência e comunicação para ajudar
-        clientes a escolherem o setup ideal e construir produtos web de qualidade. Este portfólio integra projetos como o site da
-        SA Comunicação e a Hero Dash.
+        Sou desenvolvedor de software, focado em criar experiências digitais limpas, acessíveis e de alta performance.
+        Tenho experiência em tecnologia, montagem e testes de computadores, além de desenvolvimento web.
+        Apaixonado por hardware, games e performance, apresento neste portfólio projetos práticos e funcionais.
       </p>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="py-12 border-t border-white/10">
-      <h2 class="text-2xl md:text-3xl font-bold">Contato</h2>
-      <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Mensagem enviada!'); this.reset();">
-        <input class="rounded-xl border border-white/10 bg-slate-900 px-4 py-3" placeholder="Seu nome" name="name" required />
-        <input class="rounded-xl border border-white/10 bg-slate-900 px-4 py-3" type="email" placeholder="Seu e-mail" name="email" required />
-        <textarea class="md:col-span-2 rounded-xl border border-white/10 bg-slate-900 px-4 py-3 min-h-[120px]" placeholder="Sua mensagem" name="message" required></textarea>
-        <button class="md:col-span-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-3 font-semibold">Enviar</button>
+    <section id="contato" class="py-12 border-t border-white/10" aria-labelledby="contato-title">
+      <h2 id="contato-title" class="text-2xl md:text-3xl font-bold">Contato</h2>
+      <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"
+            onsubmit="event.preventDefault(); alert('Mensagem enviada!'); this.reset();"
+            aria-label="Formulário de contato">
+        <input class="rounded-xl border border-white/10 bg-slate-900 px-4 py-3"
+               placeholder="Seu nome" name="name" required autocomplete="name" />
+        <input class="rounded-xl border border-white/10 bg-slate-900 px-4 py-3"
+               type="email" placeholder="Seu e-mail" name="email" required autocomplete="email" />
+        <textarea class="md:col-span-2 rounded-xl border border-white/10 bg-slate-900 px-4 py-3 min-h-[120px]"
+                  placeholder="Sua mensagem" name="message" required></textarea>
+        <button class="md:col-span-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 px-5 py-3 font-semibold" type="submit">Enviar</button>
       </form>
     </section>
 
     <footer class="py-10 text-center text-xs text-slate-500 border-t border-white/10">
-      © <span id="year"></span> • Jhonatan da Silva — Construído com Tailwind.
+      © <span id="year"></span> • Jhonatan da Silva — Construído com zelo e carinho.
     </footer>
   </main>
 
- <script>
-  // ====== Dados de projetos (agora com 'live' e 'repo') ======
-  const projetos = [
-    {
-      titulo: 'Site SA Comunicação Visual', tipo: 'site',
-      desc: 'Site institucional responsivo para comunicação visual. Estrutura clara, foco em conversão e melhorias contínuas.',
-      tags: ['HTML', 'CSS', 'JS'],
-      live: 'https://jhonatansilva1903.github.io/SITE-SA-COMUNICACAO/',   // ajuste se usar Vercel/Netlify
-      repo: 'https://github.com/jhonatansilva1903/SITE-SA-COMUNICACAO'
-    },
-    {
-      titulo: 'Curriculum Online', tipo: 'site',
-      desc: 'Currículo profissional online, enxuto e acessível, pensado para impressão e visualização mobile.',
-      tags: ['HTML', 'CSS', 'JS', 'Tailwind'],
-      live: 'https://jhonatansilva1903.github.io/Curriculum/',
-      repo: 'https://github.com/jhonatansilva1903/Curriculum'
-    },
-    {
-      titulo: 'Hero Dash', tipo: 'app',
-      desc: 'Dashboard interativa para classificar heróis por XP (tema dark/light, responsiva).',
-      tags: ['HTML', 'Tailwind', 'JS'],
-      live: 'https://jhonatansilva1903.github.io/hero-class/',           // ajuste se usar Vercel/Netlify
-      repo: 'https://github.com/jhonatansilva1903/hero-class'
+  <script>
+    // Atualiza o ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dados dos projetos
+    const projetos = [
+      {
+        titulo: 'Site SA Comunicação Visual', tipo: 'site',
+        desc: 'Site institucional responsivo para comunicação visual. Estrutura clara, foco em conversão e melhorias contínuas, site já em funcionamento.',
+        tags: ['HTML', 'CSS', 'JS'],
+        live: 'https://jhonatansilva1903.github.io/SITE-SA-COMUNICACAO/',
+        repo: 'https://github.com/jhonatansilva1903/SITE-SA-COMUNICACAO'
+      },
+      {
+        titulo: 'Curriculum Online', tipo: 'site',
+        desc: 'Currículo profissional online, enxuto e acessível, pensado para impressão e visualização mobile.',
+        tags: ['HTML', 'CSS', 'JS', 'Tailwind'],
+        live: 'https://jhonatansilva1903.github.io/Curriculum/',
+        repo: 'https://github.com/jhonatansilva1903/Curriculum'
+      },
+      {
+        titulo: 'Hero Dash', tipo: 'app',
+        desc: 'Dashboard interativa para classificar heróis por XP, para contar pontos no bootcamp Front End do Santander.',
+        tags: ['HTML', 'Tailwind', 'JS'],
+        live: 'https://jhonatansilva1903.github.io/hero-class/',
+        repo: 'https://github.com/jhonatansilva1903/hero-class'
+      }
+    ];
+
+    // Renderização dos projetos
+    const grid = document.getElementById('grid');
+    function render(lista) {
+      grid.innerHTML = '';
+      lista.forEach(p => {
+        const hasLive = typeof p.live === 'string' && /^https?:\/\//.test(p.live);
+        const el = document.createElement('article');
+        el.className = 'rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-0.5 transition-transform';
+        el.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-lg font-semibold">${p.titulo}</h3>
+            <span class="text-[11px] rounded-full border border-white/10 px-2 py-0.5 text-slate-300">${p.tipo}</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-300">${p.desc}</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
+            ${p.tags.map(t => `<span class='rounded-full border border-white/10 px-2 py-0.5'>${t}</span>`).join('')}
+          </div>
+          <div class="mt-4 flex gap-3 text-sm">
+            ${hasLive ? `<a class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5" href="${p.live}" target="_blank" rel="noopener">Live</a>` : ''}
+            <a class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5" href="${p.repo}" target="_blank" rel="noopener">Repo</a>
+          </div>
+        `;
+        grid.appendChild(el);
+      });
     }
-  ];
+    render(projetos);
 
-  // ====== Renderização de projetos (usa 'live' quando existir) ======
-  const grid = document.getElementById('grid');
-
-  function render(lista) {
-    grid.innerHTML = '';
-    lista.forEach(p => {
-      const el = document.createElement('article');
-      el.className = 'rounded-2xl border border-white/10 bg-white/5 p-5 hover:translate-y-[-2px] transition-transform';
-
-      const hasLive = typeof p.live === 'string' && /^https?:\/\//.test(p.live);
-
-      el.innerHTML = `
-        <div class="flex items-start justify-between gap-3">
-          <h3 class="text-lg font-semibold">${p.titulo}</h3>
-          <span class="text-[11px] rounded-full border border-white/10 px-2 py-0.5 text-slate-300">${p.tipo}</span>
-        </div>
-
-        <p class="mt-2 text-sm text-slate-300">${p.desc}</p>
-
-        <div class="mt-3 flex flex-wrap gap-2 text-xs text-slate-400">
-          ${p.tags.map(t => `<span class='rounded-full border border-white/10 px-2 py-0.5'>${t}</span>`).join('')}
-        </div>
-
-        <div class="mt-4 flex gap-3 text-sm">
-          ${hasLive ? `<a class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5" href="${p.live}" target="_blank" rel="noopener">Live</a>` : ''}
-          <a class="rounded-xl border border-white/10 px-3 py-2 hover:bg-white/5" href="${p.repo}" target="_blank" rel="noopener">Repo</a>
-        </div>
-      `;
-      grid.appendChild(el);
+    // Filtro de projetos
+    document.getElementById('filter').addEventListener('change', (e) => {
+      const v = e.target.value;
+      if (v === 'all') return render(projetos);
+      render(projetos.filter(p => p.tipo === v));
     });
-  }
-
-  render(projetos);
-
-  // Filtro (mantém igual)
-  document.getElementById('filter').addEventListener('change', (e) => {
-    const v = e.target.value;
-    if (v === 'all') return render(projetos);
-    render(projetos.filter(p => p.tipo === v));
-  });
-</script>
-
+  </script>
 </body>
 </html>
